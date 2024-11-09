@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started - Know Your Money</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="learning.html">Learning</a>
+        <a href="get-started.html">Get Started</a>
+    </nav>
+
+    <h1>Investment Calculator</h1>
+    <p>Enter an amount to see how it could grow if you invest it!</p>
+
+    <label for="amount">Amount ($):</label>
+    <input type="number" id="amount" placeholder="e.g., 100">
+    
+    <label for="years">Years:</label>
+    <input type="number" id="years" placeholder="e.g., 5">
+    
+    <label for="rate">Interest Rate (%):</label>
+    <input type="number" id="rate" placeholder="e.g., 5">
+    
+    <button onclick="calculateInvestment()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
