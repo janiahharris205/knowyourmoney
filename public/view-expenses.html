@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Expenses - Know Your Money</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- load Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- load UUID script -->
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuid.min.js"></script>
+   
+    <!-- load Plaid Link script -->
+    <script type="text/javascript" src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+
+
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="view-expenses.html">View Expenses</a>
+        <a href="learning.html">Learning</a>
+        <a href="get-started.html">Get Started</a>
+    </nav>
+        
+    <h1>Expense Overview</h1>
+
+    <button id="plaid-button">Connect your bank account</button>
+
+    <div id="categories"></div>
+
+    <ul id="transactions-list"></ul>
+
+    <canvas id="transactionChart" width="400" height="400"></canvas>
+
+    <!-- load JS file -->
+    <script src="view-expenses.js"></script>
+
+</body>
+</html>
