@@ -16,15 +16,84 @@
             <a href="get-started.html">Get Started</a>
         </div>
     </nav>
-    
 
-    <h1>Learn About Different Accounts</h1>
-    <div id="slide-container">
-        <p id="slide-text">Let's learn about different ways to manage and grow your money.</p>
+    <div class="content">
+        <h1>Learn About Financial Management</h1>
+        <p>Explore financial literacy topics to help you make informed decisions about managing, saving, and growing your money.</p>
+
+        <div class="category-grid">
+            <!-- Basic Financial Concepts Section -->
+            <div class="category">
+                <h2>Basic Financial Concepts</h2>
+                <div class="grid">
+                    <div class="card" onclick="showModal('income-types')">Income Types</div>
+                    <div class="card" onclick="showModal('expenses')">Expenses (Fixed vs. Variable)</div>
+                    <div class="card" onclick="showModal('budgeting')">Budgeting</div>
+                    <div class="card" onclick="showModal('surplus-deficit')">Surplus vs. Deficit</div>
+                </div>
+            </div>
+
+            <!-- Banking Essentials Section -->
+            <div class="category">
+                <h2>Banking Essentials</h2>
+                <div class="grid">
+                    <div class="card" onclick="showModal('checking-savings')">Checking vs. Savings Accounts</div>
+                    <div class="card" onclick="showModal('interest-rates')">Interest Rates</div>
+                    <div class="card" onclick="showModal('overdrafts')">Overdrafts</div>
+                    <div class="card" onclick="showModal('credit-debit')">Credit vs. Debit</div>
+                </div>
+            </div>
+
+            <!-- Saving and Investing Section -->
+            <div class="category">
+                <h2>Saving and Investing</h2>
+                <div class="grid">
+                    <div class="card" onclick="showModal('emergency-funds')">Emergency Funds</div>
+                    <div class="card" onclick="showModal('investment-accounts')">Investment Accounts</div>
+                    <div class="card" onclick="showModal('risk-return')">Risk and Return</div>
+                    <div class="card" onclick="showModal('compound-interest')">Compound Interest</div>
+                </div>
+            </div>
+
+            <!-- Managing Debt Section -->
+            <div class="category">
+                <h2>Managing Debt</h2>
+                <div class="grid">
+                    <div class="card" onclick="showModal('types-of-debt')">Types of Debt</div>
+                    <div class="card" onclick="showModal('credit-scores')">Credit Scores</div>
+                    <div class="card" onclick="showModal('loans')">Loans and Mortgages</div>
+                    <div class="card" onclick="showModal('debt-repayment')">Debt Repayment Strategies</div>
+                </div>
+            </div>
+
+            <!-- Financial Planning Section -->
+            <div class="category">
+                <h2>Financial Planning</h2>
+                <div class="grid">
+                    <div class="card" onclick="showModal('financial-goals')">Setting Financial Goals</div>
+                    <div class="card" onclick="showModal('retirement-accounts')">Retirement Accounts</div>
+                    <div class="card" onclick="showModal('insurance')">Insurance Basics</div>
+                    <div class="card" onclick="showModal('asset-allocation')">Asset Allocation</div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="button-container">
-        <button onclick="prevSlide()">Back</button>
-        <button onclick="nextSlide()">Next</button>
+
+    <!-- Modal Structure -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="info-section">
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+                <button id="next-button" onclick="showQuiz()">Next</button>
+            </div>
+            <div id="quiz-section" style="display: none;">
+                <p id="modal-checkin"></p>
+                <div id="modal-options" class="options-container"></div>
+                <p id="modal-feedback"></p>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
