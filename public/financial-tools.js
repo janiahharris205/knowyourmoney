@@ -143,21 +143,21 @@ document.getElementById('investmentForm').addEventListener('submit', function(e)
     let options = [];
     if (riskTolerance === 'low') {
         options = [
-            'High-Yield Savings Accounts',
-            'Certificates of Deposit (CDs)',
-            'Government Bonds'
+            '<a href="https://www.ally.com/bank/online-savings-account/" target="_blank" rel="noopener noreferrer">Ally Bank - Online Savings Account</a>',
+            '<a href="https://www.capitalone.com/bank/certificates/" target="_blank" rel="noopener noreferrer">Capital One - Certificates of Deposit (CDs)</a>',
+            '<a href="https://www.treasurydirect.gov/" target="_blank" rel="noopener noreferrer">U.S. Government Bonds</a>'
         ];
     } else if (riskTolerance === 'medium') {
         options = [
-            'Index Funds',
-            'Dividend-Paying Stocks',
-            'Corporate Bonds'
+            '<a href="https://investor.vanguard.com/investment-products/index-funds" target="_blank" rel="noopener noreferrer">Vanguard - Index Funds</a>',
+            '<a href="https://www.dividend.com/" target="_blank" rel="noopener noreferrer">Dividend-Paying Stocks</a>',
+            '<a href="https://www.federalreserve.gov/" target="_blank" rel="noopener noreferrer">Corporate Bonds</a>'
         ];
     } else if (riskTolerance === 'high') {
         options = [
-            'Individual Stocks',
-            'Cryptocurrencies',
-            'Real Estate Investments'
+            '<a href="https://www.schwab.com/" target="_blank" rel="noopener noreferrer">Charles Schwab - Individual Stocks</a>',
+            '<a href="https://www.coinbase.com/" target="_blank" rel="noopener noreferrer">Coinbase - Cryptocurrencies</a>',
+            '<a href="https://www.realtor.com/investment-property/" target="_blank" rel="noopener noreferrer">Real Estate Investments</a>'
         ];
     }
 
@@ -184,18 +184,18 @@ document.getElementById('savingsAccountForm').addEventListener('submit', functio
     let recommendations = [];
     if (accountFeatures === 'highInterest') {
         recommendations = [
-            'Bank A - High Yield Savings Account',
-            'Bank B - Online Savings Account with Competitive Rates'
+            `<a href="https://www.ally.com/bank/online-savings-account/" target="_blank" rel="noopener noreferrer">Ally Bank - High Yield Savings Account</a>`,
+            `<a href="https://www.citibank.com/savings/" target="_blank" rel="noopener noreferrer">Citi Bank - Online Savings Account with Competitive Rates</a>`
         ];
     } else if (accountFeatures === 'noFees') {
         recommendations = [
-            'Bank C - No Fee Savings Account',
-            'Bank D - Free Savings Account with No Minimum Balance'
+            `<a href="https://www.chase.com/personal/savings-account" target="_blank" rel="noopener noreferrer">Chase Bank - No Fee Savings Account</a>`,
+            `<a href="https://www.simple.com/" target="_blank" rel="noopener noreferrer">Simple - Free Savings Account with No Minimum Balance</a>`
         ];
     } else if (accountFeatures === 'onlineBanking') {
         recommendations = [
-            'Bank E - Advanced Online Banking Platform',
-            'Bank F - User-Friendly Mobile Banking App'
+            `<a href="https://www.capitalone.com/bank/online-savings/" target="_blank" rel="noopener noreferrer">Capital One - Advanced Online Banking Platform</a>`,
+            `<a href="https://www.monzo.com/" target="_blank" rel="noopener noreferrer">Monzo - User-Friendly Mobile Banking App</a>`
         ];
     }
 
@@ -215,34 +215,34 @@ document.getElementById('creditCardForm').addEventListener('submit', function(e)
     let recommendations = [];
     if (creditScore === 'poor') {
         recommendations = [
-            'Secured Credit Card from Bank G',
-            'Credit Builder Card from Bank H'
+            `<a href="https://www.discover.com/credit-cards/secured/" target="_blank" rel="noopener noreferrer">Discover it® Secured Credit Card</a>`,
+            `<a href="https://www.capitalone.com/credit-cards/bank-account/capital-one-cc/" target="_blank" rel="noopener noreferrer">Capital One® Secured Mastercard®</a>`
         ];
     } else if (creditScore === 'fair') {
         recommendations = [
-            'Cash Back Card for Fair Credit from Bank I',
-            'Low Interest Card from Bank J'
+            `<a href="https://www.citi.com/credit-cards/credit-builder/" target="_blank" rel="noopener noreferrer">Citi® Secured Mastercard®</a>`,
+            `<a href="https://www.bankofamerica.com/credit-cards/fair-credit/" target="_blank" rel="noopener noreferrer">Bank of America® Cash Rewards Credit Card for Fair Credit</a>`
         ];
     } else if (['good', 'veryGood', 'excellent'].includes(creditScore)) {
         if (cardFeatures === 'cashBack') {
             recommendations = [
-                '2% Cash Back Card from Bank K',
-                'Unlimited Cash Rewards Card from Bank L'
+                `<a href="https://www.chase.com/personal/credit-cards/cash-back" target="_blank" rel="noopener noreferrer">Chase Freedom Unlimited®</a>`,
+                `<a href="https://www.bankofamerica.com/credit-cards/cash-rewards/" target="_blank" rel="noopener noreferrer">Bank of America® Cash Rewards Credit Card</a>`
             ];
         } else if (cardFeatures === 'travelRewards') {
             recommendations = [
-                'Travel Rewards Card from Bank M',
-                'Airline Miles Card from Bank N'
+                `<a href="https://www.americanexpress.com/us/credit-cards/travel/" target="_blank" rel="noopener noreferrer">American Express® Gold Card</a>`,
+                `<a href="https://www.chase.com/personal/credit-cards/travel/" target="_blank" rel="noopener noreferrer">Chase Sapphire Preferred® Card</a>`
             ];
         } else if (cardFeatures === 'lowInterest') {
             recommendations = [
-                'Low APR Card from Bank O',
-                'Zero Interest Introductory Card from Bank P'
+                `<a href="https://www.citi.com/credit-cards/low-interest/" target="_blank" rel="noopener noreferrer">Citi® Diamond Preferred® Card</a>`,
+                `<a href="https://www.bankofamerica.com/credit-cards/low-interest/" target="_blank" rel="noopener noreferrer">Bank of America® Customized Cash Rewards Credit Card</a>`
             ];
         } else if (cardFeatures === 'balanceTransfer') {
             recommendations = [
-                'Balance Transfer Card with 0% APR from Bank Q',
-                'No Fee Balance Transfer Card from Bank R'
+                `<a href="https://www.chase.com/personal/credit-cards/balance-transfer" target="_blank" rel="noopener noreferrer">Chase Slate® Edge℠</a>`,
+                `<a href="https://www.discover.com/credit-cards/balance-transfer/" target="_blank" rel="noopener noreferrer">Discover it® Balance Transfer</a>`
             ];
         }
     }

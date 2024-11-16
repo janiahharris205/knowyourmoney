@@ -1,87 +1,4 @@
-/* Slideshow Styles */
-.slideshow-container {
-    position: relative;
-    max-width: 100%;
-    margin: 50px auto;
-}
-
-.slide {
-    display: none;
-    position: relative;
-    text-align: center;
-}
-
-.slide img {
-    width: 50%; /* Set the image to 50% of its original size */
-    border-radius: 10px;
-    box-shadow: lightblue 0px 0px;
-    margin: 0 auto; /* Center the image horizontally */
-}
-
-.slide-text {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    right: 15px;
-    background-color: rgba(96, 146, 171, 0.7);
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-.slide-controls {
-    display: flex;
-    justify-content: center;
-    gap: 2px;
-    margin-top: 140px;
-   
-}
-
-.slide-link {
-    color: darkblue;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    margin-bottom: 40px;
-    display: block;
-  
-}
-
-/* Smaller Slideshow Navigation Buttons */
-.prev, .next {
-    
-    cursor: pointer;
-    padding: 10px 15px;
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    transition: background-color 0.3s;
-    border-radius: 5px;
-    user-select: none;
-    background-color: rgba(96, 146, 171, 0.7);
-    z-index: 1020;
-   
-}
-
-.next {
-    right: 1000px;
-    border-radius: 5px 0 0 5px;
-    margin: 20px;
-    
-}
-
-.prev {
-    left: 1000px;
-    border-radius: 0 5px 5px 0;
-    margin: 20px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(96, 146, 171, 0.9);
-}
-
+/* Reset and Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -138,6 +55,13 @@ nav {
     transform: translateY(-2px);
 }
 
+.nav-links a.active {
+    background-color: #f0f8ff;
+    color: #333;
+    transform: translateY(-2px);
+}
+
+/* Headings and Paragraphs */
 h1 {
     margin-top: 40px;
     font-size: 2.5em;
@@ -152,7 +76,6 @@ p {
     font-size: 1.1em;
     line-height: 1.6;
     text-align: center;
-   
 }
 
 /* Category and Grid Layout */
@@ -189,6 +112,7 @@ p {
     transform: translateY(-5px);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
 }
+
 /* Slideshow Styles */
 .slideshow-container {
     position: relative;
@@ -227,22 +151,18 @@ p {
     justify-content: center;
     gap: 2px;
     margin-top: 140px;
-   
 }
 
 .slide-link {
     color: darkblue;
     text-decoration: none;
     font-weight: bold;
-    display: inline-block;
-    margin-bottom: 40px;
     display: block;
-  
+    margin-bottom: 40px;
 }
 
-/* Smaller Slideshow Navigation Buttons */
+/* Slideshow Navigation Buttons */
 .prev, .next {
-    
     cursor: pointer;
     padding: 10px 15px;
     color: white;
@@ -253,14 +173,12 @@ p {
     user-select: none;
     background-color: rgba(96, 146, 171, 0.7);
     z-index: 1020;
-   
 }
 
 .next {
     right: 1000px;
     border-radius: 5px 0 0 5px;
     margin: 20px;
-    
 }
 
 .prev {
@@ -273,116 +191,9 @@ p {
     background-color: rgba(96, 146, 171, 0.9);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Financial Tools Dashboard Styles */
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #F4F9FD;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Navigation Bar */
-nav {
-    background-color: #ADD8E6;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 3rem;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    font-weight: bold;
-    font-size: 1.8em;
-    color: #333;
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 10px 20px;
-    border-radius: 20px;
-    background-color: white;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.nav-links a:hover {
-    background-color: #f0f8ff;
-    transform: translateY(-2px);
-}
-
-h1 {
-    margin-top: 40px;
-    font-size: 2.5em;
-    color: #333;
-    text-align: center;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-p {
-    margin: 30px;
-    font-size: 1.1em;
-    line-height: 1.6;
-    text-align: center;
-   
-}
-
-/* Category and Grid Layout */
-.category {
-    margin-top: 40px;
-    text-align: left;
-}
-
-.category h2 {
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.category-grid .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    font-weight: bold;
-    color: #333;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* New Styles for Financial Tools Dashboard */
-
+/* Tools Container */
 .tools-container {
     display: flex;
     flex-direction: column;
@@ -390,84 +201,109 @@ p {
     width: 90%;
     max-width: 1200px;
     margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
 }
 
+/* Tool Section */
 .tool-section {
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px 30px;
     margin-bottom: 30px;
     width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .tool-section h2 {
-    margin-bottom: 15px;
-    color: #333;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 1.8em;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
 }
 
+/* Forms within Tool Sections */
 .tool-section form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .tool-section label {
     font-weight: bold;
-    margin-bottom: 5px;
+    color: #333;
 }
 
-.tool-section input[type="number"] {
-    padding: 8px;
+.tool-section input[type="number"],
+.tool-section select {
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
 }
 
+.tool-section input[type="number"]:focus,
+.tool-section select:focus {
+    border-color: #6c757d;
+    outline: none;
+}
+
+/* Buttons within Tool Sections */
 .tool-section button {
     align-self: flex-start;
-    padding: 10px 20px;
+    padding: 12px 25px;
     background-color: #6c757d;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .tool-section button:hover {
     background-color: #5a6268;
+    transform: scale(1.05);
 }
 
+/* Result Texts */
 #budgetResult,
 #savingsResult,
 #debtResult,
 #investmentResult,
-#quizResult {
-    margin-top: 10px;
-    font-size: 1.1em;
+#quizResult,
+#savingsAccountResult,
+#creditCardResult {
+    margin-top: 15px;
+    font-size: 1.2em;
     font-weight: bold;
+    color: #2c3e50;
 }
 
-.hidden {
-    display: none;
+/* Quiz Container */
+#quizContainer {
+    margin-top: 20px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .tools-container {
-        width: 95%;
-    }
-
-    .tool-section {
-        padding: 15px;
-    }
-}
-
-/* Navigation Link Active State */
-.nav-links a.active {
-    background-color: #f0f8ff;
+.quiz-question p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
     color: #333;
-    transform: translateY(-2px);
+}
+
+.quiz-question label {
+    margin-right: 15px;
+    font-weight: normal;
+    color: #555;
 }
 
 /* Modal Styling */
@@ -517,7 +353,7 @@ p {
     color: #333;
 }
 
-/* Options container styling */
+/* Options Container Styling */
 .options-container {
     margin-top: 20px;
     display: flex;
@@ -539,7 +375,7 @@ p {
     background-color: #e0e8ef;
 }
 
-/* Feedback styling */
+/* Feedback Styling */
 #modal-feedback {
     margin-top: 20px;
     font-size: 1.1em;
@@ -563,76 +399,6 @@ button:hover {
     background-color: #5a6268;
 }
 
-
-.tools-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
-}
-
-.tool-section {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 30px;
-    width: 100%;
-}
-
-.tool-section h2 {
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.tool-section form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.tool-section label {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.tool-section input[type="number"] {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.tool-section button {
-    align-self: flex-start;
-    padding: 10px 20px;
-    background-color: #6c757d;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.tool-section button:hover {
-    background-color: #5a6268;
-}
-
-#budgetResult,
-#savingsResult,
-#debtResult,
-#investmentResult,
-#quizResult {
-    margin-top: 10px;
-    font-size: 1.1em;
-    font-weight: bold;
-}
-
-.hidden {
-    display: none;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .tools-container {
@@ -640,13 +406,15 @@ button:hover {
     }
 
     .tool-section {
-        padding: 15px;
+        padding: 20px;
     }
-}
 
-/* Navigation Link Active State */
-.nav-links a.active {
-    background-color: #f0f8ff;
-    color: #333;
-    transform: translateY(-2px);
+    .tool-section h2 {
+        font-size: 1.6em;
+    }
+
+    .tool-section button {
+        width: 100%;
+        text-align: center;
+    }
 }
