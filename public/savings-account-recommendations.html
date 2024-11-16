@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Savings Account Recommendations - Know Your Money</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Know Your Money</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <div class="dropdown">
+                <a href="financial-tools.html">Financial Tools</a>
+                <div class="dropdown-content">
+                    <a href="budget-planner.html">Budget Planner</a>
+                    <a href="savings-calculator.html">Savings Calculator</a>
+                    <a href="investment-options.html">Investment Options</a>
+                    <a href="credit-card-recommendations.html">Credit Card Recommendations</a>
+                    <a href="savings-account-recommendations.html" class="active">Savings Account Recommendations</a>
+                </div>
+            </div>
+            <a href="learning.html">Learning</a>
+            <a href="view-expenses.html">View Expenses</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="tool-content">
+        <h1>Savings Account Recommendations</h1>
+        <form id="savingsAccountForm">
+            <label for="initialDeposit">Initial Deposit Amount ($):</label>
+            <input type="number" id="initialDeposit" required>
+
+            <label for="monthlyDeposit">Monthly Deposit Amount ($):</label>
+            <input type="number" id="monthlyDeposit" required>
+
+            <label for="accountFeatures">Preferred Account Features:</label>
+            <select id="accountFeatures" required>
+                <option value="" disabled selected>Select features</option>
+                <option value="highInterest">High Interest Rates</option>
+                <option value="noFees">No Monthly Fees</option>
+                <option value="onlineBanking">Excellent Online Banking</option>
+            </select>
+
+            <button type="submit">Get Recommendations</button>
+        </form>
+        <div id="savingsAccountResult"></div>
+    </main>
+
+    <!-- Include the specific JavaScript file for this tool -->
+    <script src="savings-account-recommendations.js"></script>
+</body>
+</html>

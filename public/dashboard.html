@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Know Your Money</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Load Chart.js for charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">Know Your Money</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <div class="dropdown">
+                <a href="financial-tools.html">Financial Tools</a>
+                <div class="dropdown-content">
+                    <a href="budget-planner.html">Budget Planner</a>
+                    <a href="savings-calculator.html">Savings Calculator</a>
+                    <a href="investment-options.html">Investment Options</a>
+                    <a href="credit-card-recommendations.html">Credit Card Recommendations</a>
+                    <a href="savings-account-recommendations.html">Savings Account Recommendations</a>
+                </div>
+            </div>
+            <a href="learning.html">Learning</a>
+            <a href="view-expenses.html">View Expenses</a>
+        </div>
+    </nav>
+
+    <main class="dashboard-content">
+        <h1>Your Financial Dashboard</h1>
+        <section class="financial-overview">
+            <h2>Financial Overview</h2>
+            <div class="chart-container">
+                <canvas id="overviewChart"></canvas>
+            </div>
+            <div class="metrics">
+                <div class="metric">
+                    <h3>Total Income</h3>
+                    <p id="totalIncome">$0.00</p>
+                </div>
+                <div class="metric">
+                    <h3>Total Expenses</h3>
+                    <p id="totalExpenses">$0.00</p>
+                </div>
+                <div class="metric">
+                    <h3>Net Savings</h3>
+                    <p id="netSavings">$0.00</p>
+                </div>
+            </div>
+        </section>
+        <section class="recent-activities">
+            <h2>Recent Activities</h2>
+            <ul id="recent-activities-list">
+                <!-- Populated by JavaScript -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Know Your Money. All rights reserved.</p>
+    </footer>
+
+    <!-- Include necessary scripts -->
+    <script src="dashboard.js"></script>
+</body>
+</html>

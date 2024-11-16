@@ -8,20 +8,114 @@
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="view-expenses.html">View Expenses</a>
-        <a href="learning.html">Learning</a>
-        <a href="get-started.html">Get Started</a>
+        <div class="logo">Know Your Money</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <div class="dropdown">
+                <a href="financial-tools.html">Financial Tools</a>
+                <div class="dropdown-content">
+                    <a href="budget-planner.html">Budget Planner</a>
+                    <a href="savings-calculator.html">Savings Calculator</a>
+                    <a href="investment-options.html">Investment Options</a>
+                    <a href="credit-card-recommendations.html">Credit Card Recommendations</a>
+                    <a href="savings-account-recommendations.html">Savings Account Recommendations</a>
+                </div>
+            </div>
+            <a href="learning.html">Learning</a>
+            <a href="view-expenses.html">View Expenses</a>
+        </div>
     </nav>
 
-    <h1>Welcome to Know Your Money!</h1>
-    <p>This website is here to help you understand how money works and how you can make the most of it!</p>
-    <p>On this site, you’ll learn about:</p>
-    <ul>
-        <li>Different types of accounts, like savings accounts and Roth IRAs, to help you save and grow your money.</li>
-        <li>How investing can make your money grow over time.</li>
-        <li>Tips for spending wisely and saving for the future.</li>
-    </ul>
-    <p>Ready to get started? Head over to our Learning page to learn about different types of accounts or the Get Started page to try our investment calculator!</p>
+    <!-- Welcome Description -->
+    <main class="content">
+        <section class="intro">
+            <h1>Welcome to Know Your Money!</h1>
+            <p>This website is your guide to understanding money management. Explore different types of accounts, learn investment basics, and get tips on how to save smartly.</p>
+        </section>
+
+        <!-- Slideshow Section -->
+        <section class="slideshow-container">
+            <div class="slide fade">
+                <img src="images/roth_ira.webp" alt="Roth IRA" class="slide-image">
+                <div class="slide-text">
+                    <h2>What is a Roth IRA?</h2>
+                    <p>Learn the basics of Roth IRAs and how they can help you grow your savings.</p>
+                    <a href="https://www.schwab.com/learn/story/what-is-roth-ira" class="slide-link" target="_blank" rel="noopener noreferrer">Read More</a>
+                </div>
+                <div class="slide-controls">
+                    <a class="prev" onclick="changeSlide(-1)">&#10094; Prev</a>
+                    <a class="next" onclick="changeSlide(1)">Next &#10095;</a>
+                </div>
+            </div>
+
+            <div class="slide fade">
+                <img src="images/investing.webp" alt="Investing 101" class="slide-image">
+                <div class="slide-text">
+                    <h2>Investing 101</h2>
+                    <p>Discover how investing can help your money grow over time.</p>
+                    <a href="https://www.finra.org/investors/investing/investing-basics" class="slide-link" target="_blank" rel="noopener noreferrer">Read More</a>
+                </div>
+                <div class="slide-controls">
+                    <a class="prev" onclick="changeSlide(-1)">&#10094; Prev</a>
+                    <a class="next" onclick="changeSlide(1)">Next &#10095;</a>
+                </div>
+            </div>
+
+            <div class="slide fade">
+                <img src="images/tax.png" alt="Taxes" class="slide-image">
+                <div class="slide-text">
+                    <h2>Taxes</h2>
+                    <p>A tax is a mandatory payment or charge collected by governments from individuals or businesses to cover the costs of services, goods, and activities.</p>
+                    <a href="https://www.irs.gov/" class="slide-link" target="_blank" rel="noopener noreferrer">Read More</a>
+                </div>
+                <div class="slide-controls">
+                    <a class="prev" onclick="changeSlide(-1)">&#10094; Prev</a>
+                    <a class="next" onclick="changeSlide(1)">Next &#10095;</a>
+                </div>
+            </div>
+
+            <div class="slide fade">
+                <img src="images/budget.png" alt="Budgeting" class="slide-image">
+                <div class="slide-text">
+                    <h2>Saving for the Future: Budgeting</h2>
+                    <p>Tips and tricks for building a secure financial future.</p>
+                    <a href="https://www.usbank.com/financialiq/manage-your-household/life-events/graduating-from-college/budgeting-strategies-to-consider.html" class="slide-link" target="_blank" rel="noopener noreferrer">Read More</a>
+                </div>
+                <div class="slide-controls">
+                    <a class="prev" onclick="changeSlide(-1)">&#10094; Prev</a>
+                    <a class="next" onclick="changeSlide(1)">Next &#10095;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Script for Manual Slideshow -->
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slide");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        // Initialize the first slide
+        showSlides(slideIndex);
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Know Your Money. All rights reserved.</p>
+    </footer>
 </body>
 </html>
