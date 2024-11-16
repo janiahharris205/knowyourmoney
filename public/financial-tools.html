@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta and Title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Tools Dashboard - Know Your Money</title>
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Load Chart.js for interactive charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Know Your Money</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="view-expenses.html">View Expenses</a>
+            <a href="learning.html">Learning</a>
+            <a href="financial-tools.html">Financial Tools</a> 
+        </div>
+    </nav>
+
+    <!-- Main Heading -->
+    <h1>Financial Tools Dashboard</h1>
+    <p>Utilize our suite of interactive financial tools to manage and enhance your financial well-being.</p>
+
+    <!-- Tools Container -->
+    <div class="tools-container">
+        <!-- Budget Planner -->
+        <section class="tool-section">
+            <h2>Budget Planner</h2>
+            <form id="budgetForm">
+                <label for="income">Monthly Income ($):</label>
+                <input type="number" id="income" required>
+
+                <label for="expenses">Monthly Expenses ($):</label>
+                <input type="number" id="expenses" required>
+
+                <button type="submit">Calculate Budget</button>
+            </form>
+            <p id="budgetResult"></p>
+        </section>
+
+        <!-- Savings Goals Calculator -->
+        <section class="tool-section">
+            <h2>Savings Goals Calculator</h2>
+            <form id="savingsForm">
+                <label for="goalAmount">Savings Goal ($):</label>
+                <input type="number" id="goalAmount" required>
+
+                <label for="monthlySavings">Monthly Savings ($):</label>
+                <input type="number" id="monthlySavings" required>
+
+                <button type="submit">Calculate Time</button>
+            </form>
+            <p id="savingsResult"></p>
+        </section>
+
+        <!-- Interactive Financial Charts -->
+        <section class="tool-section">
+            <h2>Interactive Financial Charts</h2>
+            <canvas id="financialChart" width="400" height="400"></canvas>
+        </section>
+
+        <!-- Financial Health Quiz -->
+        <section class="tool-section">
+            <h2>Financial Health Quiz</h2>
+            <button id="startQuiz">Start Quiz</button>
+            <div id="quizContainer" class="hidden">
+                <form id="quizForm">
+                    <div class="quiz-question">
+                        <p>1. Do you have an emergency fund covering at least 3 months of expenses?</p>
+                        <label><input type="radio" name="q1" value="yes" required> Yes</label>
+                        <label><input type="radio" name="q1" value="no"> No</label>
+                    </div>
+                    <div class="quiz-question">
+                        <p>2. Are you contributing regularly to a retirement account?</p>
+                        <label><input type="radio" name="q2" value="yes" required> Yes</label>
+                        <label><input type="radio" name="q2" value="no"> No</label>
+                    </div>
+                    <div class="quiz-question">
+                        <p>3. Do you track your monthly expenses?</p>
+                        <label><input type="radio" name="q3" value="yes" required> Yes</label>
+                        <label><input type="radio" name="q3" value="no"> No</label>
+                    </div>
+                    <button type="submit">Submit Quiz</button>
+                </form>
+                <p id="quizResult"></p>
+            </div>
+        </section>
+
+        <!-- Investment Options -->
+        <section class="tool-section">
+            <h2>Investment Options</h2>
+            <form id="investmentForm">
+                <label for="riskTolerance">Risk Tolerance:</label>
+                <select id="riskTolerance" required>
+                    <option value="" disabled selected>Select your risk tolerance</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+
+                <label for="investmentAmount">Amount to Invest ($):</label>
+                <input type="number" id="investmentAmount" required>
+
+                <button type="submit">Get Investment Options</button>
+            </form>
+            <div id="investmentResult"></div>
+        </section>
+
+        <!-- Savings Account Recommendations -->
+        <section class="tool-section">
+            <h2>Savings Account Recommendations</h2>
+            <form id="savingsAccountForm">
+                <label for="initialDeposit">Initial Deposit Amount ($):</label>
+                <input type="number" id="initialDeposit" required>
+
+                <label for="monthlyDeposit">Monthly Deposit Amount ($):</label>
+                <input type="number" id="monthlyDeposit" required>
+
+                <label for="accountFeatures">Preferred Account Features:</label>
+                <select id="accountFeatures" required>
+                    <option value="" disabled selected>Select features</option>
+                    <option value="highInterest">High Interest Rates</option>
+                    <option value="noFees">No Monthly Fees</option>
+                    <option value="onlineBanking">Excellent Online Banking</option>
+                </select>
+
+                <button type="submit">Get Recommendations</button>
+            </form>
+            <div id="savingsAccountResult"></div>
+        </section>
+
+        <!-- Credit Card Recommendations -->
+        <section class="tool-section">
+            <h2>Credit Card Recommendations</h2>
+            <form id="creditCardForm">
+                <label for="creditScore">Credit Score Range:</label>
+                <select id="creditScore" required>
+                    <option value="" disabled selected>Select your credit score range</option>
+                    <option value="poor">300-579 (Poor)</option>
+                    <option value="fair">580-669 (Fair)</option>
+                    <option value="good">670-739 (Good)</option>
+                    <option value="veryGood">740-799 (Very Good)</option>
+                    <option value="excellent">800-850 (Excellent)</option>
+                </select>
+
+                <label for="cardFeatures">Preferred Card Features:</label>
+                <select id="cardFeatures" required>
+                    <option value="" disabled selected>Select features</option>
+                    <option value="cashBack">Cash Back</option>
+                    <option value="travelRewards">Travel Rewards</option>
+                    <option value="lowInterest">Low Interest Rates</option>
+                    <option value="balanceTransfer">Balance Transfer Options</option>
+                </select>
+
+                <button type="submit">Get Recommendations</button>
+            </form>
+            <div id="creditCardResult"></div>
+        </section>
+    </div>
+
+    <!-- Load JavaScript for Financial Tools -->
+    <script src="financial-tools.js"></script>
+</body>
+</html>
