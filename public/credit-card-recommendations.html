@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Credit Card Recommendations - Know Your Money</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Know Your Money</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <div class="dropdown">
+                <a href="financial-tools.html">Financial Tools</a>
+                <div class="dropdown-content">
+                    <a href="budget-planner.html">Budget Planner</a>
+                    <a href="savings-calculator.html">Savings Calculator</a>
+                    <a href="investment-options.html">Investment Options</a>
+                    <a href="credit-card-recommendations.html" class="active">Credit Card Recommendations</a>
+                    <a href="savings-account-recommendations.html">Savings Account Recommendations</a>
+                </div>
+            </div>
+            <a href="learning.html">Learning</a>
+            <a href="view-expenses.html">View Expenses</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="tool-content">
+        <h1>Credit Card Recommendations</h1>
+        <form id="creditCardForm">
+            <label for="creditScore">Credit Score Range:</label>
+            <select id="creditScore" required>
+                <option value="" disabled selected>Select your credit score range</option>
+                <option value="poor">300-579 (Poor)</option>
+                <option value="fair">580-669 (Fair)</option>
+                <option value="good">670-739 (Good)</option>
+                <option value="veryGood">740-799 (Very Good)</option>
+                <option value="excellent">800-850 (Excellent)</option>
+            </select>
+
+            <label for="cardFeatures">Preferred Card Features:</label>
+            <select id="cardFeatures" required>
+                <option value="" disabled selected>Select features</option>
+                <option value="cashBack">Cash Back</option>
+                <option value="travelRewards">Travel Rewards</option>
+                <option value="lowInterest">Low Interest Rates</option>
+                <option value="balanceTransfer">Balance Transfer Options</option>
+            </select>
+
+            <button type="submit">Get Recommendations</button>
+        </form>
+        <div id="creditCardResult"></div>
+    </main>
+
+    <!-- Include the specific JavaScript file for this tool -->
+    <script src="credit-card-recommendations.js"></script>
+</body>
+</html>

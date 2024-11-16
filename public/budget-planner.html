@@ -2,20 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Expenses - Know Your Money</title>
+    <title>Budget Planner - Know Your Money</title>
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- load Chart.js -->
+    <!-- Load Chart.js for charts -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
-    <!-- load UUID script -->
-    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuid.min.js"></script>
-   
-    <!-- load Plaid Link script -->
-    <script type="text/javascript" src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
-
-
 </head>
 <body>
     <nav>
@@ -24,9 +14,9 @@
             <a href="index.html">Home</a>
             <a href="dashboard.html">Dashboard</a>
             <div class="dropdown">
-                <a href="financial-tools.html" class="active">Financial Tools</a>
+                <a href="financial-tools.html">Financial Tools</a>
                 <div class="dropdown-content">
-                    <a href="budget-planner.html">Budget Planner</a>
+                    <a href="budget-planner.html" class="active">Budget Planner</a>
                     <a href="savings-calculator.html">Savings Calculator</a>
                     <a href="investment-options.html">Investment Options</a>
                     <a href="credit-card-recommendations.html">Credit Card Recommendations</a>
@@ -37,20 +27,25 @@
             <a href="view-expenses.html">View Expenses</a>
         </div>
     </nav>
-    
-        
-    <h1>Expense Overview</h1>
 
-    <button id="plaid-button">Connect your bank account</button>
+    <!-- Main Content -->
+    <main class="tool-content">
+        <h1>Budget Planner</h1>
+        <form id="budgetForm">
+            <label for="income">Monthly Income ($):</label>
+            <input type="number" id="income" required>
 
-    <div id="categories"></div>
+            <label for="expenses">Monthly Expenses ($):</label>
+            <input type="number" id="expenses" required>
 
-    <ul id="transactions-list"></ul>
+            <button type="submit">Calculate Budget</button>
+        </form>
+        <p id="budgetResult"></p>
 
-    <canvas id="transactionChart" width="400" height="400"></canvas>
+        <canvas id="budgetChart" width="400" height="400"></canvas>
+    </main>
 
-    <!-- load JS file -->
-    <script src="view-expenses.js"></script>
-
+    <!-- Include the specific JavaScript file for this tool -->
+    <script src="budget-planner.js"></script>
 </body>
 </html>

@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning - Know Your Money</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -11,15 +10,34 @@
         <div class="logo">Know Your Money</div>
         <div class="nav-links">
             <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <div class="dropdown">
+                <a href="financial-tools.html">Financial Tools</a>
+                <div class="dropdown-content">
+                    <a href="budget-planner.html">Budget Planner</a>
+                    <a href="savings-calculator.html">Savings Calculator</a>
+                    <a href="investment-options.html">Investment Options</a>
+                    <a href="credit-card-recommendations.html">Credit Card Recommendations</a>
+                    <a href="savings-account-recommendations.html">Savings Account Recommendations</a>
+                </div>
+            </div>
+            <a href="learning.html" class="active">Learning</a>
             <a href="view-expenses.html">View Expenses</a>
-            <a href="learning.html">Learning</a>
-            <a href="financial-tools.html">Financial Tools</a> 
         </div>
     </nav>
 
     <div class="content">
         <h1>Learn About Financial Management</h1>
         <p>Explore financial literacy topics to help you make informed decisions about managing, saving, and growing your money.</p>
+
+        <!-- Progress Tracker -->
+        <div class="progress-tracker">
+            <h2>Your Progress</h2>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+            </div>
+            <p id="progressText">You've completed 0 out of 10 topics.</p>
+        </div>
 
         <div class="category-grid">
             <!-- Basic Financial Concepts Section -->
@@ -92,10 +110,12 @@
                 <p id="modal-checkin"></p>
                 <div id="modal-options" class="options-container"></div>
                 <p id="modal-feedback"></p>
+                <button onclick="completeTopic()">Complete Topic</button>
             </div>
         </div>
     </div>
 
+    <!-- Include the specific JavaScript file for learning -->
     <script src="script.js"></script>
 </body>
 </html>

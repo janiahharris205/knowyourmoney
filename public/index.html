@@ -11,9 +11,19 @@
         <div class="logo">Know Your Money</div>
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="view-expenses.html">View Expenses</a>
+            <a href="dashboard.html">Dashboard</a>
+            <div class="dropdown">
+                <a href="financial-tools.html">Financial Tools</a>
+                <div class="dropdown-content">
+                    <a href="budget-planner.html">Budget Planner</a>
+                    <a href="savings-calculator.html">Savings Calculator</a>
+                    <a href="investment-options.html">Investment Options</a>
+                    <a href="credit-card-recommendations.html">Credit Card Recommendations</a>
+                    <a href="savings-account-recommendations.html">Savings Account Recommendations</a>
+                </div>
+            </div>
             <a href="learning.html">Learning</a>
-            <a href="financial-tools.html">Financial Tools</a> 
+            <a href="view-expenses.html">View Expenses</a>
         </div>
     </nav>
 
@@ -27,63 +37,54 @@
         <!-- Slideshow Section -->
         <section class="slideshow-container">
             <div class="slide fade">
-                <img src="roth ira.webp" alt="Placeholder Image 1" class="slide-image">
-                <div class="slide-bottom">
-                    <div class="slide-text">
-                        <h2>What is a Roth IRA?</h2>
-                        <p>Learn the basics of Roth IRAs and how they can help you grow your savings.</p>
-                        <a href="https://www.schwab.com/learn/story/what-is-roth-ira" class="slide-link">Read More</a> <!-- Replace with actual link -->
-                    </div>
-                    <div class="slide-controls">
-                        <a class="prev" onclick="changeSlide(-1)">&#10094; Prev</a>
-                        <a class="next" onclick="changeSlide(1)">Next &#10095;</a>
-                    </div>
+                <img src="images/roth_ira.webp" alt="Roth IRA" class="slide-image">
+                <div class="slide-text">
+                    <h2>What is a Roth IRA?</h2>
+                    <p>Learn the basics of Roth IRAs and how they can help you grow your savings.</p>
+                    <a href="https://www.schwab.com/learn/story/what-is-roth-ira" class="slide-link" target="_blank" rel="noopener noreferrer">Read More</a>
+                </div>
+                <div class="slide-controls">
+                    <a class="prev" onclick="changeSlide(-1)">&#10094; Prev</a>
+                    <a class="next" onclick="changeSlide(1)">Next &#10095;</a>
                 </div>
             </div>
 
             <div class="slide fade">
-                <img src="investing.webp" alt="Placeholder Image 2" class="slide-image">
-                <div class="slide-bottom">
-                    <div class="slide-text">
-                        <h2>Investing 101</h2>
-                        <p>Discover how investing can help your money grow over time. </p>
-                        <a href="https://www.finra.org/investors/investing/investing-basics" class="slide-link">Read More</a> <!-- Replace with actual link -->
-                    </div>
-                    <div class="slide-controls">
-                        <a class="prev" onclick="changeSlide(-1)">&#10094; Prev</a>
-                        <a class="next" onclick="changeSlide(1)">Next &#10095;</a>
-                    </div>
+                <img src="images/investing.webp" alt="Investing 101" class="slide-image">
+                <div class="slide-text">
+                    <h2>Investing 101</h2>
+                    <p>Discover how investing can help your money grow over time.</p>
+                    <a href="https://www.finra.org/investors/investing/investing-basics" class="slide-link" target="_blank" rel="noopener noreferrer">Read More</a>
                 </div>
-            </div>
-
-
-            <div class="slide fade">
-                <img src="tax.png" alt="Placeholder Image 2" class="slide-image">
-                <div class="slide-bottom">
-                    <div class="slide-text">
-                        <h2>Taxes</h2>
-                        <p>A tax is a mandatory payment or charge collected by local, state, and national governments from individuals or businesses to cover the costs of general government services, goods, and activities.                        </p>
-                        <a href="https://www.finra.org/investors/investing/investing-basics" class="slide-link">Read More</a> <!-- Replace with actual link -->
-                    </div>
-                    <div class="slide-controls">
-                        <a class="prev" onclick="changeSlide(-1)">&#10094; Prev</a>
-                        <a class="next" onclick="changeSlide(1)">Next &#10095;</a>
-                    </div>
+                <div class="slide-controls">
+                    <a class="prev" onclick="changeSlide(-1)">&#10094; Prev</a>
+                    <a class="next" onclick="changeSlide(1)">Next &#10095;</a>
                 </div>
             </div>
 
             <div class="slide fade">
-                <img src="budget.png" alt="Placeholder Image 3" class="slide-image">
-                <div class="slide-bottom">
-                    <div class="slide-text">
-                        <h2>Saving for the Future: Budgeting</h2>
-                        <p>Tips and tricks for building a secure financial future.</p>
-                        <a href="https://www.usbank.com/financialiq/manage-your-household/life-events/graduating-from-college/budgeting-strategies-to-consider.html" class="slide-link">Read More</a> <!-- Replace with actual link -->
-                    </div>
-                    <div class="slide-controls">
-                        <a class="prev" onclick="changeSlide(-1)">&#10094; Prev</a>
-                        <a class="next" onclick="changeSlide(1)">Next &#10095;</a>
-                    </div>
+                <img src="images/tax.png" alt="Taxes" class="slide-image">
+                <div class="slide-text">
+                    <h2>Taxes</h2>
+                    <p>A tax is a mandatory payment or charge collected by governments from individuals or businesses to cover the costs of services, goods, and activities.</p>
+                    <a href="https://www.irs.gov/" class="slide-link" target="_blank" rel="noopener noreferrer">Read More</a>
+                </div>
+                <div class="slide-controls">
+                    <a class="prev" onclick="changeSlide(-1)">&#10094; Prev</a>
+                    <a class="next" onclick="changeSlide(1)">Next &#10095;</a>
+                </div>
+            </div>
+
+            <div class="slide fade">
+                <img src="images/budget.png" alt="Budgeting" class="slide-image">
+                <div class="slide-text">
+                    <h2>Saving for the Future: Budgeting</h2>
+                    <p>Tips and tricks for building a secure financial future.</p>
+                    <a href="https://www.usbank.com/financialiq/manage-your-household/life-events/graduating-from-college/budgeting-strategies-to-consider.html" class="slide-link" target="_blank" rel="noopener noreferrer">Read More</a>
+                </div>
+                <div class="slide-controls">
+                    <a class="prev" onclick="changeSlide(-1)">&#10094; Prev</a>
+                    <a class="next" onclick="changeSlide(1)">Next &#10095;</a>
                 </div>
             </div>
         </section>
@@ -107,9 +108,14 @@
             }
             slides[slideIndex - 1].style.display = "block";
         }
+
+        // Initialize the first slide
+        showSlides(slideIndex);
     </script>
 
     <!-- Footer -->
-   
+    <footer>
+        <p>&copy; 2024 Know Your Money. All rights reserved.</p>
+    </footer>
 </body>
 </html>

@@ -1,3 +1,5 @@
+// script.js
+
 const modal = document.getElementById("modal");
 const modalTitle = document.getElementById("modal-title");
 const modalDescription = document.getElementById("modal-description");
@@ -7,6 +9,17 @@ const modalFeedback = document.getElementById("modal-feedback");
 const nextButton = document.getElementById("next-button");
 const infoSection = document.getElementById("info-section");
 const quizSection = document.getElementById("quiz-section");
+const progressFill = document.getElementById("progressFill");
+const progressText = document.getElementById("progressText");
+
+let completedTopics = 0;
+const totalTopics = 10;
+
+// Retrieve completed topics from localStorage
+if (localStorage.getItem('completedTopics')) {
+    completedTopics = parseInt(localStorage.getItem('completedTopics'));
+    updateProgressBar();
+}
 
 const descriptions = {
     // Basic Financial Concepts
@@ -160,7 +173,6 @@ const descriptions = {
     }
 };
 
-
 function showModal(term) {
     const data = descriptions[term];
     modalTitle.innerText = data.title;
@@ -173,7 +185,7 @@ function showModal(term) {
         const button = document.createElement("button");
         button.className = "option-button";
         button.innerText = option;
-        button.onclick = () => checkAnswer(option, data.correctAnswer);
+        button.onclick = () => checkAnswer(option, data.correctAnswer, term);
         modalOptions.appendChild(button);
     });
 
@@ -190,14 +202,38 @@ function showQuiz() {
     quizSection.style.display = "block";
 }
 
-function checkAnswer(selected, correct) {
+function checkAnswer(selected, correct, term) {
     if (selected === correct) {
         modalFeedback.innerText = "Correct! Well done!";
         modalFeedback.style.color = "green";
+        markTopicAsCompleted(term);
     } else {
         modalFeedback.innerText = `Incorrect. The correct answer is: ${correct}`;
         modalFeedback.style.color = "red";
     }
+}
+
+function markTopicAsCompleted(term) {
+    // Check if the topic was already completed
+    const completedTopicsList = JSON.parse(localStorage.getItem('completedTopicsList')) || [];
+    if (!completedTopicsList.includes(term)) {
+        completedTopics++;
+        completedTopicsList.push(term);
+        localStorage.setItem('completedTopics', completedTopics);
+        localStorage.setItem('completedTopicsList', JSON.stringify(completedTopicsList));
+        updateProgressBar();
+    }
+}
+
+function updateProgressBar() {
+    const percentage = (completedTopics / totalTopics) * 100;
+    progressFill.style.width = `${percentage}%`;
+    progressText.innerText = `You've completed ${completedTopics} out of ${totalTopics} topics.`;
+}
+
+function completeTopic() {
+    // Close the modal after completing the topic
+    closeModal();
 }
 
 function closeModal() {
@@ -209,19 +245,4 @@ window.onclick = function(event) {
     if (event.target === modal) {
         closeModal();
     }
-}
-
-function calculateInvestment() {
-    const amount = parseFloat(document.getElementById("amount").value);
-    const years = parseInt(document.getElementById("years").value);
-    const rate = parseFloat(document.getElementById("rate").value);
-
-    if (isNaN(amount) || isNaN(years) || isNaN(rate)) {
-        document.getElementById("result").textContent = "Please enter valid numbers.";
-        return;
-    }
-
-    const futureValue = amount * Math.pow(1 + rate / 100, years);
-    document.getElementById("result").textContent = 
-        `After ${years} years, your investment could grow to $${futureValue.toFixed(2)}!`;
 }
