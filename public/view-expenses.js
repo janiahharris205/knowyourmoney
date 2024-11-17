@@ -127,8 +127,6 @@ async function setupAccessTokenIfNeeded() {
   }
 }
 
-
-
 //function to handle Plaid Link success
 async function onPlaidLinkSuccess(publicToken) {
   try {

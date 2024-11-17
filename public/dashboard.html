@@ -56,6 +56,40 @@
                 <!-- Populated by JavaScript -->
             </ul>
         </section>
+        <section class="edit-transactions">
+            <h2>Edit Transactions</h2>
+            <button id="toggleEditForm">Edit Transactions</button>
+        
+            <div id="editButtons" style="display: none;">
+                <button id="showAddFormButton">Add Transaction</button>
+                <button id="showRemoveFormButton">Remove Transaction</button>
+            </div>
+        
+            <div id="addForm" style="display: none;">
+                <h3>Add Transactions</h3>
+                <form id="addTransactionForm">
+                    <label for="description">Description:</label>
+                    <input type="text" id="description" required>
+        
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" required>
+        
+                    <button type="submit">Add Transaction</button>
+                </form>
+            </div>
+        
+            <div id="removeForm" style="display: none;">
+                <h3>Remove Transactions</h3>
+                <form id="removeTransactionForm">
+                    <label for="removeIndex">Transaction Index:</label>
+                    <input type="number" id="removeIndex" required min="1">
+        
+                    <button type="submit">Remove Transaction</button>
+                </form>
+            </div>
+        </section>
+        
+        
     </main>
 
     <footer>
